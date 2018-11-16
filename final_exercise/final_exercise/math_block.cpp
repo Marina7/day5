@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "math_block.h"
 #include <algorithm> // std::pow, std::clamp
+#include <stdexcept>
 
 double identity::evaluate(double input) const
 {
@@ -32,7 +33,10 @@ double power::evaluate(double input) const
 }
 
 limit::limit(double min_value, double max_value) : min_value{ min_value }, max_value{ max_value }
-{ }
+{
+	if (max_value < min_value)
+		throw std::invalid_argument("Wrong limit interval.");
+}
 
 double limit::evaluate(double input) const
 {

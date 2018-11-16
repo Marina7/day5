@@ -11,6 +11,7 @@ public:
 class identity : public math_block
 {
 public:
+	identity() = default;
 	double evaluate(double input) const override;
 };
 
