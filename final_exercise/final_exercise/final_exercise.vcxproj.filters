@@ -35,5 +35,8 @@
     <ClCompile Include="math_block.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="linear_sequence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
