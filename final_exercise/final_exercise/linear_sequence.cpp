@@ -5,9 +5,9 @@ linear_sequence::linear_sequence()
 {
 }
 
-int linear_sequence::number_of_blocks()
+size_t linear_sequence::number_of_blocks() const
 {
-	return 0;
+	return sequence.size();
 }
 
 void linear_sequence::add_math_block(const math_block & math_block)
@@ -22,12 +22,12 @@ void linear_sequence::move_to_first_position(size_t index)
 {
 }
 
-double linear_sequence::evaluate(double input)
+double linear_sequence::evaluate(double input) const
 {
 	return 0.0;
 }
 
-std::wstring linear_sequence::show_sequence()
+std::wstring linear_sequence::show_sequence() const
 {
 	return std::wstring();
 }

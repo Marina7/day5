@@ -63,7 +63,7 @@ namespace final_exercise_test
 
 			Assert::AreEqual(3, lin_seq.number_of_blocks());
 
-			lin_seq.delete_math_block(1);
+			lin_seq.delete_math_block(0); // 0-index, user on console will write 1
 
 			Assert::AreEqual(2, lin_seq.number_of_blocks());
 			//Assert::AreEqual(L"", lin_seq.show_sequence());
@@ -78,7 +78,7 @@ namespace final_exercise_test
 
 			Assert::AreEqual(3, lin_seq.number_of_blocks());
 
-			lin_seq.delete_math_block(3);
+			lin_seq.delete_math_block(2);
 
 			Assert::AreEqual(2, lin_seq.number_of_blocks());
 			//Assert::AreEqual(L"", lin_seq.show_sequence());
@@ -93,7 +93,7 @@ namespace final_exercise_test
 
 			Assert::AreEqual(3, lin_seq.number_of_blocks());
 
-			lin_seq.delete_math_block(2);
+			lin_seq.delete_math_block(1);
 
 			Assert::AreEqual(2, lin_seq.number_of_blocks());
 			//Assert::AreEqual(L"", lin_seq.show_sequence());

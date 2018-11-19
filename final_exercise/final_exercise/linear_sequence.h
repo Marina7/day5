@@ -1,20 +1,23 @@
 #pragma once
-#include <vector>
+#include <list>
 #include "math_block.h"
+#include <memory>
+
 
 class linear_sequence
 {
+	std::list<std::unique_ptr<math_block>> sequence;
 public:
 	linear_sequence();
 	~linear_sequence() = default;
 	
-	int number_of_blocks();
-	void add_math_block(const math_block& math_block);
+	size_t number_of_blocks() const;
+	void add_math_block(const math_block& block);
 	void delete_math_block(size_t index);
 	void move_to_first_position(size_t index);
 
-	double evaluate(double input);
+	double evaluate(double input) const;
 
-	std::wstring show_sequence();
+	std::wstring show_sequence() const;
 
 };
