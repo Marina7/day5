@@ -16,6 +16,9 @@ void linear_sequence::add_math_block(const math_block & math_block)
 
 void linear_sequence::delete_math_block(size_t index)
 {
+	if (index < 0 || index >= sequence.size())
+		return; // TODO: maybe throw
+	// TODO: delete math_block from sequence
 }
 
 void linear_sequence::move_to_first_position(size_t index)
