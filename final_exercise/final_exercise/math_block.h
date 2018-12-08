@@ -1,10 +1,11 @@
 #pragma once
-
+#include <string>
 
 class math_block
 {
 public:
 	virtual double evaluate(double input) const = 0;
+	virtual std::wstring print(const std::wstring& input) const = 0;
 	virtual ~math_block() = default;
 };
 
@@ -13,6 +14,7 @@ class identity : public math_block
 public:
 	identity() = default;
 	double evaluate(double input) const override;
+	std::wstring print(const std::wstring& input) const override;
 };
 
 class addition : public math_block
@@ -21,6 +23,7 @@ class addition : public math_block
 public:
 	addition(double addend = 0);
 	double evaluate(double input) const override;
+	std::wstring print(const std::wstring& input) const override;
 };
 
 class multiplication : public math_block
@@ -29,6 +32,7 @@ class multiplication : public math_block
 public:
 	multiplication(double factor = 1);
 	double evaluate(double input) const override;
+	std::wstring print(const std::wstring& input) const override;
 };
 
 class power : public math_block
@@ -37,6 +41,7 @@ class power : public math_block
 public:
 	power(double exponent = 1);
 	double evaluate(double input) const override;
+	std::wstring print(const std::wstring& input) const override;
 };
 
 class limit : public math_block
@@ -45,6 +50,7 @@ class limit : public math_block
 public:
 	limit(double min_value, double max_value);
 	double evaluate(double input) const override;
+	std::wstring print(const std::wstring& input) const override;
 };
 
 class condition : public math_block
@@ -53,4 +59,5 @@ class condition : public math_block
 public:
 	condition(double compare_to);
 	double evaluate(double input) const override;
+	std::wstring print(const std::wstring& input) const override;
 };
